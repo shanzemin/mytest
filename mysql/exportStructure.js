@@ -1,14 +1,14 @@
-const mysql = require("mysql2")
+const mysql = require('mysql2')
 const xlsx = require('node-xlsx')
 const path = require('path')
 const fse = require('fs-extra')
 
 // 数据库配置
 const pool = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "123456",
-  database: "mysql",
+  host: 'localhost',
+  user: 'root',
+  password: '123456',
+  database: 'mysql',
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
