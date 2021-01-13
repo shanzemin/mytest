@@ -28,7 +28,7 @@ function query (sql) {
 }
 
 // 生成excel文件
-function gennerateExcel (data = [], dir = './') {
+function generateExcel (data = [], dir = './') {
   const buffer = xlsx.build([{ name: 'Sheet1', data: data }])
   const filename = `${Date.now()}.xlsx`
   let filePath = path.resolve(__dirname, dir)
@@ -54,7 +54,7 @@ async function exec () {
     // 添加两条空行 隔开每个表
     data.push([], [])
   }
-  await gennerateExcel(data, './files')
+  await generateExcel(data, './files')
   console.log('------end-------')
 }
 
